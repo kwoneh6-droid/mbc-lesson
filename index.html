@@ -361,6 +361,69 @@
       summary:focus::before {
         content: "▼";
       }
+
+      .project-summary {
+        background: linear-gradient(135deg, #fff7f9 0%, #ffffff 100%);
+      }
+
+      .summary-intro {
+        margin-bottom: 20px;
+        color: var(--text-muted);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .summary-card {
+        background: var(--primary-light);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .summary-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: var(--primary-color);
+      }
+
+      .summary-card ul {
+        margin: 0;
+        padding-left: 18px;
+        list-style: disc;
+      }
+
+      .summary-card li {
+        background: none;
+        padding: 0;
+        margin-bottom: 8px;
+      }
+
+      .summary-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .summary-links a {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .summary-links a:hover {
+        background: var(--primary-hover);
+      }
     </style>
   </head>
   <body id="top">
@@ -391,6 +454,49 @@
           <li><strong>웹 표준 및 시맨틱 보완:</strong> 불필요한 연속 <code><hr></code> 태그를 제거하고 CSS Border와 패딩을 통해 시각적 여백을 깔끔하게 정리했습니다.</li>
         </ul>
       </div> -->
+
+      <!-- 프로젝트 요약 섹션 -->
+      <section class="project-summary">
+        <h2>프로젝트 요약</h2>
+        <p class="summary-intro">
+          이 웹 프로젝트는 HTML, CSS, JavaScript를 단계적으로 배우며 만든 실습 예제와 과제 모음입니다.
+          기본 태그부터 반응형 레이아웃, 애니메이션, 자바스크립트 동작까지 한눈에 확인할 수 있도록 정리했습니다.
+        </p>
+
+        <div class="summary-grid">
+          <article class="summary-card">
+            <h3>01. HTML 기초</h3>
+            <ul>
+              <li>텍스트, 링크, 이미지, 폼, 테이블 실습</li>
+              <li>시맨틱 태그와 iframe 구조 학습</li>
+            </ul>
+          </article>
+
+          <article class="summary-card">
+            <h3>02. CSS 스타일링</h3>
+            <ul>
+              <li>선택자, 우선순위, 텍스트 스타일</li>
+              <li>박스모델, 배경, 그림자, 애니메이션</li>
+              <li>반응형 웹과 미디어 쿼리 실습</li>
+            </ul>
+          </article>
+
+          <article class="summary-card">
+            <h3>03. JavaScript</h3>
+            <ul>
+              <li>자바스크립트 연결 방식 학습</li>
+              <li>함수, 변수, 입력 처리 실습</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="summary-links">
+          <a href="./01/ex1-4.html">HTML 기본 예제</a>
+          <a href="./02-css/ex2-1.html">CSS 실습 보기</a>
+          <a href="./03-js/ex3-1.html">JavaScript 실습 보기</a>
+          <a href="./docs/AIcreator.html">추가 자료 보기</a>
+        </div>
+      </section>
 
       <!-- 학습문서 목록 섹션 -->
       <section>
