@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url('./reset.css');
+
+h3{
+   font-size: 2em;
+   font-weight: bold;
+}
+
+p:before{
+    content: '💔';
+font-size: 4em;
+display: block;
+
+}
+
+p::after{
+    content: '요고추가';
+    font-size: 4em;
+    
+    text-shadow: 2px 2px 2px red;
+    color: red;
+    font-weight: lighter;
+}
+
+
+p{
+    width: 600px;
+
+}
+

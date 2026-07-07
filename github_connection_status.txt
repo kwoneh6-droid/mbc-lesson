@@ -1,0 +1,30 @@
+[깃허브 연동 상태 확인 결과]
+
+1. Git 사용자 정보 (전역 설정)
+- 이름: kwoneh6-droid
+- 이메일: kwoneh6@gmail.com
+※ 커밋 시 사용되는 기본 정보는 설정되어 있습니다.
+
+2. SSH 인증 상태
+- github.com 연결 결과: Permission denied (publickey)
+- SSH 키를 통한 깃허브 연동은 완료되어 있지 않습니다.
+
+3. GitHub CLI (gh)
+- 시스템에 설치되어 있지 않거나 경로가 지정되지 않았습니다.
+
+4. 현재 작업 디렉토리 (D:\ai_contents_class\web\html)
+- Git 저장소로 초기화되어 있지 않습니다. (.git 폴더 없음)
+
+[결론 및 조치 방법]
+현재 깃허브와의 실제 인증 연동(SSH 또는 CLI 로그인)은 완료되지 않은 상태입니다. 깃허브를 연동하여 사용하시려면 아래 방법 중 하나를 진행해 주세요.
+
+방법 A: HTTPS 로그인 연동 (가장 간편한 방법)
+1. 터미널에서 현재 폴더를 Git 저장소로 초기화합니다:
+   git init
+2. 본인의 깃허브 원격 저장소를 연결합니다:
+   git remote add origin <깃허브 저장소 주소>
+3. 첫 push를 시도하면 자격 증명(Git Credential Manager) 창이 뜨며 웹 브라우저 로그인을 통해 자동으로 연동됩니다:
+   git push -u origin main
+
+방법 B: SSH 키 등록
+1. SSH 키 쌍을 생성한 후, 공개키(id_ed25519.pub 등)를 깃허브 계정의 [Settings -> SSH and GPG keys]에 등록해야 합니다.

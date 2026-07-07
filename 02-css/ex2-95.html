@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애니메이션</title>
+    <style>
+      :root {
+        --move: calc(100% - 300px);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: olivedrab;
+        background-color: green;
+        opacity: 0.8;
+        background:
+          linear-gradient(135deg, #3961228f 25%, transparent 25%) -10px 0/ 20px 20px,
+          linear-gradient(225deg, #4e8031 25%, transparent 25%) -10px 0/ 20px 20px,
+          linear-gradient(315deg, #4c7533c0 25%, transparent 25%) 0px 0/ 20px 20px,
+          linear-gradient(45deg, #4e8031 25%, #376e4edc 25%) 0px 0/ 20px 20px;
+      }
+      .ball {
+        width: 200px;
+        animation: cup 5s infinite alternate;
+        position: absolute;
+      }
+      @keyframes cup {
+        0% {
+          left: 0;
+          transform: rotate(0deg);
+        }
+        50% {
+          left: var(--move);
+          top: 0%;
+        }
+        100% {
+          left: var(--move);
+          top: var(--move);
+          transform: rotate(720deg);
+        }
+      }
+      .goalpost {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        rotate: 90deg;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/3ddog.png" alt="" class="dog" />
+    <img src="./img/soccerball.png" alt="축구공" class="ball" />
+    <img src="./img/goalpost.png" alt="" class="goalpost" />
+  </body>
+</html>

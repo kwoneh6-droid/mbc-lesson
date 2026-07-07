@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* position
+기능 : 요소를 좌표로 위치시키는 속성(직접 좌표값을 입력해서 위치를 설정)
+속성값 : absolute, relative, sticky, static, fixed
+좌표값을 지정하는 속성
+: top, right, bottom, left
+*/
+
+.child:nth-child(1) {
+  /* static은 포지션을 넣기전에 준비상태(포지셔닝을 하기전 기본값)
+    =>좌표값을 갖지 않겠다는 말로 좌표값을 더하는걸로 해결되지 않음 */
+  position: static;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 0;
+  /* 0보다 작은 값은 배경뒤로 가버려서 사용하지 않는것이 적합함 */
+}
+.child:nth-child(2) {
+  position: relative;
+  top: -100px;
+  z-index: 2;
+}
+.child:nth-child(3) {
+  position: relative;
+  top: -150px;
+  z-index: 3;
+}

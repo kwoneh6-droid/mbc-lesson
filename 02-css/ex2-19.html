@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css우선순위</title>
+    <link rel="stylesheet" href="css/ex2-19.css">
+    <style>
+        @import url("css/import.css");
+        p{color: yellow;}
+    </style>
+    <style>
+        body{background-color: black;}
+        body{background-color: ivory;}
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <p style="color: orange;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, pariatur temporibus nulla maxime id nam? Odit beatae hic dignissimos aliquam vero debitis cum accusantium ipsa accusamus iusto, expedita saepe molestiae.</p>
+    <h2 title="점수" class="h2" id="h2">명시도(점수)</h2>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "UTF-8"
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 500px;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+.info_wrap {
+  border: 1px solid #ddd;
+  text-align: center;
+}
+h2 {
+  text-align: left;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+.box {
+  padding: 20px;
+  line-height: 3;
+}
+h3 {
+  color: red;
+  font-weight: bold;
+  word-spacing: 5px;
+  font-size: 18px;
+  margin-top: 0;
+}
+p {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-size: 20px;
+}
+.blue {
+  color: blue;
+}
+/* .box:nth-child는 전체에서 클래스 박스 중에서 둘쨰를 찾음 */
+/* .box:nth-child(2) { */
+.box:nth-of-type(2) {
+border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* EX)
+4남 2녀
+ .box:nth-child(2)는 전체 6남매중에 2째인 박스인 아이를 찾음
+ .box:nth-of-type(2)는 전체 남매들 중에 남자인 아이들중 2째를 찾음 */

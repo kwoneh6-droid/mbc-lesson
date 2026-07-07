@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셀병합하기</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid pink ;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 2행 3열의 표를 만드시오 -->
+    <!-- table>(tr>td*2)*3 -->
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="3">1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <!-- 3행 3열 -->
+    <table>
+      <tbody>
+        <tr>
+          <td rowspan="3">1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          
+          <td>6</td>
+          <td>7</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+

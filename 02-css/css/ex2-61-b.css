@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.red {
+  position: absolute;
+  /* float 발생 */
+  top: 50%;
+  left: 50%;
+}
+.green {
+  position: relative;
+  /* normal flow */
+  top: 50%;
+  left: 50%;
+}
+.child.blue{
+    position: fixed;
+    /* position만 선언하고 좌표삾을 정하지 않으면 자기자리에 있는다 */
+    width: auto;
+    /* 앞쪽에 값이 선언되어있다면 너비를 auto로 바꾸면 다시 가변적으로 변함 */
+    left: 0;
+    right: 0;
+    top: -100px;
+    transition: .5s;
+}
+.green:hover+.blue{top: 0;}
+
+body{height: 200vh;}

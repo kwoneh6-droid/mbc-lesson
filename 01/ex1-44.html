@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셀병합 퀴즈</title>
+    <style>
+      table {
+        margin: 0 auto;
+        width: 300px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid #333;
+      }
+     th, td {
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 4행2열의 표를 만들어 병합하기 
+     1. table>(tr>td*2)*4
+     2. 첫번째 td태그 안에 colspan=2
+     3. 두번째 td태그 안에 rowspan=3
+     4-1. 중앙정렬은 중앙정렬하고 싶은 칸의 td를 th로 바꾸던가
+     4-2. style태그 안에 text-align: center;를 넣거나 -->
+    <!--  -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">컴퓨터 그래픽스 기능사</th>
+        </tr>
+      </thead>
+      <tr>
+        <th rowspan="3">프로그램</th>
+        <td>일러스트</td>
+      </tr>
+      <tr>
+        <td>포토샵</td>
+      </tr>
+      <tr>
+        <td>인디자인</td>
+      </tr>
+    </table>
+  </body>
+</html>

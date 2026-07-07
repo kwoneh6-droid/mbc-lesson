@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #c581aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 1440px; /* Based on typical Figma design width, adjusted as needed */
+    height: 1024px;
+    background-color: #c581aa;
+}
+
+.decoration {
+    position: absolute;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.box {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.bottom-box {
+    background-color: black;
+    height: 107px;
+    width: 735px;
+    left: calc(16.67% + 132px);
+    top: calc(50% + 103px);
+}
+
+.right-box {
+    height: 420px;
+    width: 343px;
+    left: calc(75% - 8px);
+    top: 40px;
+}
+
+.left-box {
+    height: 420px;
+    width: calc(100% - 74.47% - 2.67%);
+    left: 2.67%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-box {
+    height: 314px;
+    width: 736px;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+}
+
+.main-title {
+    position: absolute;
+    width: 654px;
+    left: calc(25% + 375px);
+    top: 196.5px;
+    transform: translate(-50%, -50%);
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-size: 81.313px;
+    color: black;
+    text-align: center;
+    letter-spacing: -2.4394px;
+    line-height: 0.9;
+    word-break: break-word;
+}
+
+.info {
+    position: absolute;
+    width: 270px;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    letter-spacing: 1.2px;
+    line-height: 0.9;
+    word-break: break-word;
+}
+
+.info-left {
+    left: 211px;
+    top: 250px;
+    transform: translate(-50%, -50%);
+}
+
+.info-right {
+    left: calc(75% + 164px);
+    top: 250px;
+    transform: translate(-50%, -50%);
+}
+
+.info-bottom {
+    width: 654px;
+    left: calc(25% + 375px);
+    top: calc(50% + 156.5px);
+    transform: translate(-50%, -50%);
+    color: #c581aa; /* Background color to contrast with the black bottom box */
+}

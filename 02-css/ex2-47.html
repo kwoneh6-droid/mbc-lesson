@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>gradient의 표현</title>
+    <style>
+      p {
+        padding: 60px;
+      }
+      .g1 {
+        /* 지원이 안되는 구형브라우저를 위한 폴백 */
+        background-image: blue;
+        background-image: linear-gradient(red, green, blue);
+      }
+      .g2 {
+        background-image: linear-gradient(to right, red, green, blue);
+      }
+      .g3 {
+        background-image: linear-gradient(45deg, red, green, blue);
+        background-clip: text;
+        color: transparent;
+      }
+      .g4 {
+        background-image: linear-gradient(45deg, red 15%, green 50%, blue 35%);
+      }
+      .g5 {
+        background-image: radial-gradient(red, green, blue);
+      }
+      .g6 {
+        background-image: repeating-linear-gradient(red, green 15%, blue 30%);
+      }
+      /* 합이 100%가 안되게 지정하면 반복됨▲ */
+      .g7 {
+        background: #eeaeca;
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(244, 178, 183, 1) 46%, rgba(248, 255, 145, 1) 100%);
+      }
+      .g8 {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(94, 236, 255, 0.2) 0%, rgba(180, 254, 148, 0.2) 100%), #d9d9d9;
+      }
+      .g9 {
+        background-color: #ffd8d8;
+        opacity: 0.8;
+        background:
+          radial-gradient(circle, transparent 20%, #ffd8d8 20%, #ffd8d8 80%, transparent 80%, transparent),
+          radial-gradient(circle, transparent 20%, #ffd8d8 20%, #ffd8d8 80%, transparent 80%, transparent) 25px 25px,
+          linear-gradient(#805841 2px, transparent 2px) 0 -1px,
+          linear-gradient(90deg, #805841 2px, #ffd8d8 2px) -1px 0;
+        background-size:
+          50px 50px,
+          50px 50px,
+          25px 25px,
+          25px 25px;
+      }
+      .g10 {
+        background-color: #69d2e7;
+        opacity: 0.8;
+        background:
+          linear-gradient(135deg, #a7dbd855 25%, transparent 25%) -10px 0/ 20px 20px,
+          linear-gradient(225deg, #a7dbd8 25%, transparent 25%) -10px 0/ 20px 20px,
+          linear-gradient(315deg, #a7dbd855 25%, transparent 25%) 0px 0/ 20px 20px,
+          linear-gradient(45deg, #a7dbd8 25%, #69d2e7 25%) 0px 0/ 20px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="g1">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g2">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g3">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g4">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g5">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g6">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g7">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g8">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g9">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g10">It's impossible not only starting good but also keeping it firm!!</p>
+  </body>
+</html>

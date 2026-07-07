@@ -1,0 +1,32 @@
+/* font-family */
+#box1 h2 {
+  /* 글꼴 : 글꼴명1, 글꼴명2, 서체계열
+  속성값에 특수 문자가 포함되어 있으면 따옴표로 감싸야 함 */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em; /* 1em=16px 2em=32 32em=64*/
+  font-weight: normal;
+  font-weight: bold;
+}
+#box1 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#box2 h2 {
+  font-style: italic;
+  color: aqua;
+}
+#box2 h2 {
+  font-variant: small-caps;
+  color: #336633;
+}
+/* 단축문법 : sugar, syntax */
+#box3 h2 {
+  font: 4em arial;
+ border: 1px solid black; 
+}
+#box3 p {
+  font: small-caps 30px "Times New Roman";
+}
+

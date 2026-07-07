@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>권은희 | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="./source/imgs/favicon1.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap" rel="stylesheet" />
+    <style>
+      /*프레젠테이션 폰트 */
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-1Thin.woff2") format("woff2");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-2ExtraLight.woff2") format("woff2");
+        font-weight: 200;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2") format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-6SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-8ExtraBold.woff2") format("woff2");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Presentation";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2") format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+    </style>
+    <style>
+      /* 변수 선언: 핑크/로즈 골드 계열의 전문적인 컬러 팔레트 */
+      :root {
+        --primary-color: #d15a7c; /* 세련된 다크 핑크 (프라이머리) */
+        --primary-light: #fbebed; /* 매우 연한 핑크 배경색 */
+        --primary-hover: #b34360; /* 링크 호버 시 딥 핑크 */
+        --text-color: #333333; /* 기본 텍스트 색상 */
+        --text-muted: #666666; /* 부가 설명 텍스트 색상 */
+        --border-color: #e0d0d5; /* 경계선 색상 */
+        --bg-color: #faf6f7; /* 전체 바디 부드러운 배경색 */
+        --white: #ffffff;
+      }
+      * {
+        font-family: "Presentation";
+      }
+
+      /* 기본 스타일 초기화 및 레이아웃 설정 */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      /* 헤더 영역 디자인 개선 */
+      header {
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-color);
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+
+      header h1 {
+        margin: 0 0 15px 0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      header h1 a {
+        color: var(--primary-color);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      header h1 img {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .emoji-bar {
+        font-size: 16px;
+        margin-bottom: 20px;
+        letter-spacing: 4px;
+      }
+
+      .banner-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      /* 메인 콘텐츠 영역 레이아웃 */
+      main {
+        max-width: 800px; /* 기존 width: 50%를 모바일 대응 및 가독성을 위해 max-width 구조로 변경 */
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      /* 섹션 공통 스타일 */
+      section {
+        background-color: var(--white);
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(209, 90, 124, 0.1);
+        text-align: left; /* 중앙 정렬에서 좌측 정렬로 변경하여 텍스트 가독성 향상 */
+      }
+
+      h2 {
+        color: var(--primary-color);
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-light);
+        display: inline-block;
+      }
+
+      h3 {
+        color: var(--text-color);
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      h3::before {
+        content: "•";
+        color: var(--primary-color);
+        font-size: 20px;
+      }
+
+      /* 리스트 및 링크 아이템 스타일 개선 */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+
+      li {
+        margin-bottom: 12px;
+        padding: 10px 14px;
+        background-color: var(--primary-light);
+        border-radius: 6px;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease;
+      }
+
+      li:hover {
+        background-color: #f7dadf;
+        transform: translateX(4px);
+      }
+
+      li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+      }
+
+      li a:hover {
+        color: var(--primary-hover);
+      }
+
+      /* 이미지 포함 링크 처리 */
+      li a img {
+        border-radius: 4px;
+        display: block;
+        max-height: 80px;
+        width: auto;
+        object-fit: contain;
+        border: 1px solid var(--border-color);
+      }
+
+      /* 안내 및 변경점 표시 세션 */
+      .changelog-box {
+        background-color: #edf5fe;
+        border: 1px solid #c2dbff;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+        color: #2b4c7e;
+      }
+      .changelog-box h2 {
+        color: #2b4c7e;
+        border-bottom-color: #d0e3ff;
+      }
+      .changelog-box ul li {
+        background-color: #f4f8ff;
+      }
+      .changelog-box ul li:hover {
+        background-color: #e5f0ff;
+        transform: none;
+      }
+
+      /* 유효성 검사 및 탑 버튼 하단 영역 */
+      .footer-actions {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .footer-actions h3 a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      .footer-actions h3 a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+
+      .top-btn {
+        display: inline-block;
+        margin-top: 15px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 6px 16px;
+        border: 1px solid var(--primary-color);
+        border-radius: 20px;
+        transition: all 0.2s ease;
+      }
+
+      .top-btn:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      .assignment-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .assignment-link a {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 10px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(209, 90, 124, 0.3);
+        transition: all 0.2s ease;
+      }
+
+      .assignment-link a:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+      }
+    </style>
+    <!-- 내가 넣기 시작한 곳 -->
+    <style>
+      .logo:hover {
+        background-color: #e988a07b;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease;
+      }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=wand_stars" />
+    <style>
+      a:hover::before {
+        content: "wand_stars";
+        font-family: "Material Symbols Rounded";
+      }
+      /* !!!!!!!!!!!!!바꾸는 중!!!!!!!!!!! */
+      summary {
+        font-size: 20px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+      }
+      summary {
+        margin-bottom: 12px;
+        padding: 10px 14px;
+        background-color: var(--primary-light);
+        border-radius: 6px;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease;
+      }
+      summary:hover {
+        color: var(--primary-hover);
+        background-color: #f7dadf;
+        transform: translateX(4px);
+      }
+      summary:focus::before {
+        content: "▼";
+      }
+    </style>
+  </head>
+  <body id="top">
+    <!-- 상단 헤더 영역 -->
+    <header>
+      <h1 class="logo">
+        <a href="./index.html">
+          <img src="./source/imgs/logo.jpg" alt="로고" width="30" height="30" onerror="this.style.display = 'none'" />
+          EH's Portfolio
+          <img src="./source/imgs/logo.jpg" alt="로고" width="30" height="30" onerror="this.style.display = 'none'" />
+        </a>
+      </h1>
+      <div class="emoji-bar">💟🧡💛💚💙💜🤎💟</div>
+      <img src="./source/imgs/pink.png" alt="메인 배경 이미지" class="banner-img" width="1000" />
+    </header>
+
+    <!-- 본문 영역 -->
+    <main>
+      <!-- AI 변경점 안내 상자 (요청하신 변경 사항 표시 부분) -->
+      <!-- <div class="changelog-box">
+        <h2>✨ 주요 리디자인 변경 사항 안내</h2>
+        <p>기존 문서를 보다 전문적이고 모던한 포트폴리오 스타일로 개선했습니다. 변경된 핵심 포인트는 다음과 같습니다:</p>
+        <ul>
+          <li><strong>컬러 팔레트 전면 개편:</strong> 기존의 다소 원색적인 핑크 투명도(rgba) 배경 대신, 세련된 <strong>다크 로즈 핑크(#d15a7c)</strong>를 프라이머리 톤으로 지정하고 눈이 편안한 미색 배경(#faf6f7)을 매칭했습니다.</li>
+          <li><strong>레이아웃 가독성 향상:</strong> 본문을 강제로 중앙 정렬(text-align: center)하여 텍스트가 흩어지던 구조에서, 섹션별 카드를 배치하고 <strong>텍스트를 좌측 정렬</strong>하여 전문적인 문서 가독성을 확보했습니다.</li>
+          <li><strong>모바일 반응형 대응:</strong> 기존 <code>width: 50%</code> 고정 방식에서 최대 너비 <code>max-width: 800px</code> 구조로 변경하여, 화면 크기에 맞게 유연하게 리사이징되도록 수정했습니다.</li>
+          <li><strong>컴포넌트 디자인화:</strong> 리스트 아이템(li)에 소프트 핑크 배경과 둥근 테두리, 그리고 마우스 호버(Hover) 액션을 추가하여 직관적인 버튼 형태로 개선했습니다. 이미지 태그 링크의 레이아웃이 무너지지 않도록 세로 길이를 최적화했습니다.</li>
+          <li><strong>웹 표준 및 시맨틱 보완:</strong> 불필요한 연속 <code><hr></code> 태그를 제거하고 CSS Border와 패딩을 통해 시각적 여백을 깔끔하게 정리했습니다.</li>
+        </ul>
+      </div> -->
+
+      <!-- 학습문서 목록 섹션 -->
+      <section>
+        <h2>학습문서 목록</h2>
+
+        <details>
+          <summary>5월 14일</summary>
+          <ul>
+            <li>
+              <a href="./source/qr.html">QR바로가기▷</a>
+            </li>
+            <li><a href="01/ex1-4.html">제목태그: heading▷</a></li>
+            <li><a href="01/ex1-5.html">문단태그▷</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>5월 15일</summary>
+          <ul>
+            <li><a href="01/ex1-8.html">a태그▷</a></li>
+            <li>
+              <a href="01/ex1-9.html">
+                <img src="/01/img/mymelody.gif" alt="마이멜로디 아이콘" width="200" onerror="this.src = 'https://placehold.co/200x80/fbebed/d15a7c?text=My+Melody'" />
+                <span>이미지태그 (마이멜로디)▷</span>
+              </a>
+            </li>
+            <li>
+              <a href="01/ex1-10.html">
+                <img src="/01/img/hellokittycatch.gif" alt="헬로키티 아이콘" width="200" onerror="this.src = 'https://placehold.co/200x80/fbebed/d15a7c?text=Hello+Kitty'" />
+                <span>경로찾기 (헬로키티)▷</span>
+              </a>
+            </li>
+            <li><a href="./01/quest.html">Quest▷</a></li>
+            <li>
+              <a href="./path/img/1.html">
+                <img src="./path/img/0518-2.jpeg" alt="0518 이동 이미지" width="200" onerror="this.src = 'https://placehold.co/200x80/fbebed/d15a7c?text=0518+Image'" />
+                <span>경로로이동▷</span>
+              </a>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>5월 19일</summary>
+          <ul>
+            <li><a href="./01/ex1-37.html">시멘틱코드▷</a></li>
+            <li><a href="./01/ex1-40.html">iframe태그▷</a></li>
+            <li><a href="./01/ex1-41.html">테이블태그 관련 (ex.1-41 ~ 44.html)▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>5월 20일</summary>
+          <ul>
+            <li><a href="./01/ex1-24.html">form요소 (ex1-24 ~ 27)▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>5월 21일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-1.html">css (요소2-1 / 2-5)▷</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>5월 22일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-6.html">css선택자 - ID▷</a></li>
+            <li><a href="./02-css/ex2-7.html">css선택자 - class▷</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>05월 27일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-19.html">css우선순위▷</a></li>
+            <li><a href="./02-css/ex2-17.html">가상선택자▷</a></li>
+            <li><a href="./02-css/ex2-21.html">문자관련 스타일▷</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>05월 28일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-18.html">unit(단위)▷</a></li>
+            <li>
+              <a href="./02-css/ex2-22.html"><span class="material-symbols-rounded"> wand_stars </span>webfont(웹폰트 사용법)▷</a>
+            </li>
+            <li><a href="./02-css/quiz2.html">선택자_형성평가_5▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>05월 29일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-24.html">색상▷</a></li>
+            <li>
+              <a href="./02-css/ex2-25.html">자간과 어간▷</a>
+            </li>
+            <li><a href="./02-css/ex2-26.html">text-decoration, text-transform▷</a></li>
+            <li><a href="./02-css/quiz3.html">형성평가1▷</a></li>
+            <li><a href="./02-css/quiz4.html">형성평가2▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 02일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-.html">색상▷</a></li>
+            <li>
+              <a href="./02-css/ex2-.html">자간과 어간▷</a>
+            </li>
+            <li><a href="./02-css/ex2-.html">text-decoration, text-transform▷</a></li>
+            <li><a href="./02-css/quiz5.html">▷</a></li>
+            <li><a href="./02-css/quiz4.html">형성평가2▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 04일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-55.html">둥근 테두리▷</a></li>
+            <li>
+              <a href="./02-css/ex2-56.html">테두리 이미지▷</a>
+            </li>
+            <li><a href="./02-css/ex2-57.html">액자▷</a></li>
+            <li><a href="./02-css/ex2-58.html">box-sizing▷</a></li>
+            <li><a href="./02-css/ex2-59.html">box-shadow▷</a></li>
+            <li><a href="./02-css/ex2-39.html">opacity▷</a></li>
+            <li><a href="./02-css/ex2-40.html">배경이미지▷</a></li>
+            <li><a href="./02-css/ex2-41.html">배경이미지의 반복여부▷</a></li>
+            <li><a href="./02-css/ex2-42.html">배경이미지의 위치▷</a></li>
+            <li><a href="./02-css/ex2-47.html">gradient의 표현▷</a></li>
+            <li><a href="./02-css/ex2-49.html">다중 배경이미지▷</a></li>
+            <li><a href="./02-css/ex2-60.html">배경 합성 모드▷</a></li>
+            <li><a href="./02-css/ex2-61.html">MASK▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 05일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-60-a.html">float 텍스트 흐름▷</a></li>
+            <li>
+              <a href="./02-css/ex2-61-a.html">position absolute & relative▷</a>
+            </li>
+            <li><a href="./02-css/ex2-62.html">sticky position▷</a></li>
+            <li><a href="./02-css/ex2-63.html">flex 정렬▷</a></li>
+            <li><a href="./02-css/ex2-59.html">box-shadow▷</a></li>
+            <li><a href="./02-css/ex2-39.html">opacity▷</a></li>
+            <li><a href="./02-css/ex2-40.html">배경이미지▷</a></li>
+            <li><a href="./02-css/ex2-41.html">배경이미지의 반복여부▷</a></li>
+            <li><a href="./02-css/ex2-42.html">배경이미지의 위치▷</a></li>
+            <li><a href="./02-css/ex2-47.html">gradient의 표현▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 11일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-87.html">미디어 쿼리 기본 문법▷</a></li>
+            <li>
+              <a href="./02-css/ex2-88.html">min-width와 max-width▷</a>
+            </li>
+            <li><a href="./02-css/ex2-89.html">중단점과 모바일 우선▷</a></li>
+            <li><a href="./02-css/ex2-90.html">Mostly Fluid▷</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 12일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-91.html">Column Drop▷</a></li>
+            <li>
+              <a href="./02-css/ex2-92.html">Layout Shifter▷</a>
+            </li>
+            <li><a href="./02-css/ex2-93.html">calc 레이아웃▷</a></li>
+            <li><a href="./02-css/ex2-90.html">Mostly Fluid▷</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>06월 13일</summary>
+          <ul>
+           <li><a href="./02-css/ex2-94.html">16:9 반응형 영상+object-fit 속성▷</a></li>
+            <li><a href="./02-css/ex2-95.html">애니메이션</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>06월 17일</summary>
+          <ul>
+            <li><a href="./02-css/ex2-99.html">beat애니메이션▷</a></li>
+            <li>
+              <a href="./02-css/ex2-100.html">beat애니메이션2▷</a>
+            </li>
+            <li><a href="./02-css/ex2-101.html">rotate애니메이션▷</a></li>
+            <li><a href="./02-css/ex2-102.html">경로따라 이동▷</a></li>
+           
+        </details>
+        <details>
+          <summary>06월 18일 - 자바스크립트</summary>
+          <ul>
+            <li><a href="./03-js/ex3-1.html">자바스크립트를 넣는법▷</a></li>
+            <li>
+              <a href="./03-js/ex3-2.html">자바스크립트를 넣는법2▷</a>
+            </li>
+            <li><a href="./03-js/ex3-3.html">4.3프롬프트창▷</a></li>
+           
+       </details>
+        <details>
+          <summary>06월 22일 - 자바스크립트</summary>
+          <ul>
+            <li><a href="./03-js/ex3-3.html">beat애니메이션▷</a></li>
+            <li>
+              <a href="./02-css/ex2-100.html">beat애니메이션2▷</a>
+            </li>
+            <li><a href="./02-css/ex2-101.html">rotate애니메이션▷</a></li>
+            <li><a href="./02-css/ex2-102.html">경로따라 이동▷</a></li>
+           
+        </details>
+      </section>
+
+      <!-- HTML 개발 팁 섹션 -->
+      <section>
+        <h2>HTML 개발 시 알아야 할 Tip</h2>
+        <ul>
+          <li><a href="./source/information/block_inline_guide.html">블록레벨가이드</a></li>
+          <li><a href="./source/information/web-naming-rules.html">웹개발시파일작명법</a></li>
+          <li><a href="./source/information/gemini_commands.html">사용가능한 슬래시 명령어 목록</a></li>
+          <li><a href="./source/information/class_id_guide.html">id와 class선택자</a></li>
+        </ul>
+
+        <div class="assignment-link">
+          <a href="./02-css/ex-test.html">📝 과제 확인하기</a>
+          <a href="quest/cafebanner.html">📝 카페베너만들기</a>
+        </div>
+      </section>
+
+      <!-- 하단 액션 영역 -->
+      <div class="footer-actions">
+        <h3><a href="https://validator.w3.org/" target="_blank">🌐 홈페이지 유효성 검사기 바로가기</a></h3>
+        <a href="#top" class="top-btn">▲ 맨 위로</a>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

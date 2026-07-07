@@ -1,0 +1,21 @@
+@import url("./reset.css");
+
+p {
+  background: rgba(0, 100, 200, 0.3);
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  /* margin겹침현상 : 상하방향일떄만 나타남*/
+}
+
+.art2{
+    width: 300px;
+    margin: 0 auto;
+}
+
+ p:last-of-type{
+    width: 300px;
+    margin: 500px auto;
+}

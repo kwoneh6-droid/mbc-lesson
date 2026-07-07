@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\GeminiCLI]
+@="Open Gemini CLI Here"
+"Icon"="C:\\Program Files\\nodejs\\node.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\GeminiCLI\command]
+@="cmd.exe /K \"gemini\""
+
+[HKEY_CURRENT_USER\Software\Classes\directory\shell\GeminiCLI]
+@="Open Gemini CLI Here"
+"Icon"="C:\\Program Files\\nodejs\\node.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\directory\shell\GeminiCLI\command]
+@="cmd.exe /K \"cd /d \\\"%1\\\" && gemini\""

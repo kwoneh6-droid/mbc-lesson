@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.green{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.parent{
+    position: relative;
+}
+
+/* parent의 포지션에 따라 green에 적용된 absolute가 어딜 기준으로 바뀌는지를 볼것 */

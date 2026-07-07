@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* 초기화 코드 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: gray;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 2;
+  border: 5px solid;
+}
+
+/* text-decoration, text-transform */
+
+a {
+  text-decoration: line-through;
+  text-decoration: underline;
+  text-decoration: overline;
+  text-decoration: none;
+}
+
+p {
+  text-transform: uppercase /* 전부대문자 */;
+  text-transform: lowercase /* 전부소문자 */;
+  text-transform: capitalize /* 첫단어만 대문자 */;
+}
+
+/* 첫번째 a태그 선택 */
+li:nth-child(1) a {
+  color: red;
+  /* 그림자 : x축위치 Y축위치 블러 색상 */
+  text-shadow: 3px -1px 3px #000000;
+}
+
+li:nth-child(2) a {
+  color: white;
+  text-shadow: 3px -1px 10px #000000;
+}
+
+li:nth-child(2) a:hover {
+  color: white;
+  text-shadow: 3px -1px 10px magenta;
+}
+
+p{
+    color: white;
+    text-shadow: 2px 2px 2px magenta, 3px 3px 3px black;
+}
+
+/* generator, bulider, preset, cheatsheet */
+
+

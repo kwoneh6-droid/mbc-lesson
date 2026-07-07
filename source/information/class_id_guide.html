@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏷️ HTML class와 id - 우리끼리 이름 짓기!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Jua', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #d0e1f9;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 25px;
+            position: relative;
+            border: 3px solid transparent;
+        }
+
+        .id-section {
+            background-color: #fff9db;
+            border-color: #fab005;
+        }
+
+        .class-section {
+            background-color: #e3faf2;
+            border-color: #20c997;
+        }
+
+        h2 {
+            font-family: 'Jua', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .id-section h2 { color: #f08c00; }
+        .class-section h2 { color: #087f5b; }
+
+        .analogy-box {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .emoji-big {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .highlight-id {
+            background-color: #ffec99;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .highlight-class {
+            background-color: #b2f2bb;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .code-example {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 20px;
+            border-radius: 15px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95rem;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-tag { color: #ff7675; }
+        .code-attr { color: #55efc4; }
+        .code-val { color: #ffeaa7; }
+        .code-selector { color: #74b9ff; }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .compare-table th {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px;
+            font-family: 'Jua', sans-serif;
+        }
+
+        .compare-table td {
+            padding: 15px;
+            background-color: white;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .tip-badge {
+            display: inline-block;
+            background-color: #ff7675;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏷️ class와 id 배우기</h1>
+        <p class="subtitle">우리 웹사이트 친구들에게 특별한 이름을 붙여줘요!</p>
+
+        <!-- ID 섹션 -->
+        <div class="section id-section">
+            <h2>🆔 id : 너는 딱 한 명뿐이야!</h2>
+            
+            <div class="analogy-box">
+                <span class="emoji-big">🪪</span>
+                <p>id는 <span class="highlight-id">이름표</span>나 <span class="highlight-id">주민등록번호</span> 같아요!<br>
+                우리 반에서 '김철수'라는 이름표를 <strong>딱 한 명만</strong> 가질 수 있는 것과 같죠.</p>
+            </div>
+
+            <p><strong>언제 쓰나요?</strong></p>
+            <ul>
+                <li>웹페이지에서 <strong>단 하나뿐인</strong> 특별한 요소를 찾을 때 써요.</li>
+                <li>한 페이지에 똑같은 id 이름을 두 번 쓰면 컴퓨터가 헷갈려해요!</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="code-tag">&lt;div</span> <span class="code-attr">id=</span><span class="code-val">"my-hero"</span><span class="code-tag">&gt;</span>나는 주인공이야!<span class="code-tag">&lt;/div&gt;</span>
+            </div>
+
+            <p><span class="tip-badge">CSS 꿀팁</span> CSS에서 id를 부를 때는 앞에 <span class="highlight-id"># (샵)</span>을 붙여요!</p>
+            <div class="code-example">
+                <span class="code-selector">#my-hero</span> { <br>
+                &nbsp;&nbsp;<span class="code-attr">color</span>: gold;<br>
+                }
+            </div>
+        </div>
+
+        <!-- Class 섹션 -->
+        <div class="section class-section">
+            <h2>👥 class : 우리 모두 친구!</h2>
+
+            <div class="analogy-box">
+                <span class="emoji-big">👕</span>
+                <p>class는 <span class="highlight-class">반 티셔츠</span>나 <span class="highlight-class">동아리</span> 같아요!<br>
+                축구부 친구들이 <strong>모두 같은 옷</strong>을 입을 수 있는 것처럼, 여러 명에게 똑같이 줄 수 있어요.</p>
+            </div>
+
+            <p><strong>언제 쓰나요?</strong></p>
+            <ul>
+                <li>여러 요소들을 <strong>한꺼번에</strong> 똑같이 꾸미고 싶을 때 써요.</li>
+                <li>여러 개의 태그에 똑같은 class 이름을 마음껏 붙일 수 있어요!</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="code-tag">&lt;p</span> <span class="code-attr">class=</span><span class="code-val">"blue-text"</span><span class="code-tag">&gt;</span>나도 파란색!<span class="code-tag">&lt;/p&gt;</span><br>
+                <span class="code-tag">&lt;p</span> <span class="code-attr">class=</span><span class="code-val">"blue-text"</span><span class="code-tag">&gt;</span>나도 파란색이야!<span class="code-tag">&lt;/p&gt;</span>
+            </div>
+
+            <p><span class="tip-badge">CSS 꿀팁</span> CSS에서 class를 부를 때는 앞에 <span class="highlight-class">. (점)</span>을 붙여요!</p>
+            <div class="code-example">
+                <span class="code-selector">.blue-text</span> { <br>
+                &nbsp;&nbsp;<span class="code-attr">color</span>: blue;<br>
+                }
+            </div>
+        </div>
+
+        <!-- 비교표 -->
+        <div class="section" style="background-color: #f1f3f5; border-color: #dee2e6;">
+            <h2 style="color: #495057;">🆚 한눈에 비교하기</h2>
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>특징</th>
+                        <th>🆔 id</th>
+                        <th>👥 class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>사용 횟수</strong></td>
+                        <td>페이지당 딱 <strong>1번</strong></td>
+                        <td>여러 번 <strong>중복 가능</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>비유</strong></td>
+                        <td>이름표, 주민번호</td>
+                        <td>교복, 팀 유니폼</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSS 기호</strong></td>
+                        <td><span class="highlight-id"># (샵)</span></td>
+                        <td><span class="highlight-class">. (점)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>중요도</strong></td>
+                        <td>매우 높음 (주인공)</td>
+                        <td>보통 (여러 명)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 마무리 꿀팁 -->
+        <div class="section" style="background: linear-gradient(135deg, #fff0f6 0%, #ffebf8 100%); border-color: #faa2c1;">
+            <h2 style="color: #d6336c;">💡 선생님의 비밀 팁!</h2>
+            <p>1. 한 친구가 <strong>id와 class를 모두</strong> 가질 수도 있어요!<br>
+               <code>&lt;div id="boss" class="red-box"&gt;</code><br><br>
+               2. 한 친구가 <strong>여러 개의 class</strong>를 가질 수도 있어요!<br>
+               <code>&lt;div class="box red-color big-size"&gt;</code> (한 칸씩 띄어서 써요)<br><br>
+               3. <strong>id는 이름</strong>처럼, <strong>class는 별명</strong>처럼 생각하면 쉬워요!
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>🌟 멋진 이름을 붙여서 예쁜 웹페이지를 만들어보세요! 🌟</p>
+            <p style="margin-top: 10px;">Made with ❤️ for Little Developers</p>
+        </div>
+    </div>
+</body>
+</html>

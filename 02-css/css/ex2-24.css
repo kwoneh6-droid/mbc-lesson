@@ -1,0 +1,38 @@
+@charset "UTF-8"
+/* 저번에 소문자로 했는데...? */
+/* 초기화 코드 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: url(../img/bg.jpg);
+}
+
+p {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+/* 색상을 표현하는 다양한 방법 */
+.color1 {
+  background: magenta;
+}
+.color2 {
+  background: #9999ff;
+}
+.color3 {
+  background: rgb(163, 229, 77);
+}
+.color4 {
+  opacity: 0.5;
+  background: hsl(180, 50%, 50%);
+}
+.color5 {
+  color: transparent /* 투명색 */;
+  background: /* 인자,인자,인자,투명도 */ rgba(180, 255, 255, 0.2);
+}
+.color6 {
+  color: #ff00005a;
+  background: hsla(180, 50%, 50%, 0.8);
+}

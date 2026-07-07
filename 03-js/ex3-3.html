@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.3프롬프트창</title>
+</head>
+<body>
+<button class="alert">click</button>
+    <script>
+       document.querySelector('.alert').onclick = function() {
+            window.alert("hi")
+        }
+    </script>
+    <hr>
+    <button class="confirm">confirm</button>
+     <script>
+ document.querySelector('.confirm').onclick = function(){
+          confirm('정말 삭제하시겠습니까?')
+        }
+    </script>
+    <hr>
+    <button class="prompt">prompt</button>
+      <script>
+     
+        document.querySelector('.prompt').onclick = function(){
+         let a = prompt('채팅을 입력하세요')
+        console.log(a);
+        document.write(a)
+        }
+    </script>
+</body>
+    <hr>
+    <button class="write">write</button>
+   
+     <script>
+     
+        document.querySelector('.write').onclick = function(){
+            // 괄호없이 사용하는것 속성/프로퍼티
+         let a = document.write(`<h1>안녕하세요</h1><h2>권은희입니다</h2>`)
+        // console.log(a);
+        // document.write(a)
+        // 뒤의 둘다 도큐먼트는 문서로 출력하는 건데 콘솔로하라니까 맞지않아서 undefined가 나오는 거임
+        
+        }
+    </script>
+    <hr>
+    <button class="log">log</button>
+   
+     <script>
+    //  빨간글씨 : 예약어-자바스크립트가 미리 만들어놓은 단어를 가진 것들
+    // 식별자는 값구분을 위서 바꿈
+        document.querySelector('.log').onclick = function(){
+         let a;
+        //  ▲괄호없고 혼자씀-> 변수
+          a = console.log(`출력해봐여`)
+      
+
+        }
+    </script>
+</body>
+</html>

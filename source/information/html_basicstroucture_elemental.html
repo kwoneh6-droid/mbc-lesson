@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 기본 구조 - 초등학생도 쉽게 이해하기!</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        h1 {
+            color: #2c5aa0;
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #e74c3c;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #3498db;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .code-box {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .code-box .tag { color: #ff79c6; }
+        .code-box .attr { color: #50fa7b; }
+        .code-box .value { color: #f1fa8c; }
+        .code-box .comment { color: #6272a4; }
+        .code-box .text { color: #f8f8f2; }
+        .explanation {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .tip-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .browser-preview {
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .browser-bar {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+        .browser-url {
+            background-color: white;
+            padding: 4px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #666;
+            flex: 1;
+            text-align: center;
+        }
+        .browser-content {
+            padding: 30px;
+            background-color: white;
+        }
+        .tag-pair {
+            display: inline-block;
+            background-color: #e3f2fd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-family: monospace;
+            color: #1976d2;
+        }
+        .emoji { font-size: 1.3em; }
+        .highlight {
+            background-color: #fff59d;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .structure-diagram {
+            background-color: #fafafa;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .diagram-box {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .box-html { background-color: #ffccbc; }
+        .box-head { background-color: #c5cae9; }
+        .box-body { background-color: #c8e6c9; }
+        .box-title { background-color: #b3e5fc; }
+        .box-h1 { background-color: #fff9c4; }
+        .box-p { background-color: #e1bee7; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .memory-trick {
+            background-color: #fce4ec;
+            border: 3px solid #f48fb1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 25px 0;
+        }
+        .memory-trick .emoji-big {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML 기본 구조</h1>
+        <p class="subtitle">초등학생도 쉽게 이해하는 웹페이지 만들기!</p>
+
+        <div class="explanation">
+            <strong>HTML이 뭔가요?</strong> HTML은 <strong>웹사이트를 만드는 언어</strong>예요. 
+            마치 레고 블록을 쌓아서 집을 짓듯이, HTML을 쌓아서 웹페이지를 만드는 거예요!
+        </div>
+
+        <h2>HTML 문서의 기본 틀</h2>
+        <p>HTML 문서는 항상 <strong>비슷한 틀</strong>을 가지고 있어요. 마치 학교 시간표처럼 정해진 자리가 있는 거예요.</p>
+
+        <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;내 웹페이지 제목&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;안녕! 나의 첫 웹페이지&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;여기에 내용을 쓰면 화면에 보여요.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+        </div>
+
+        <h2>각 부분이 뭔지 알아볼까요?</h2>
+
+        <h3>1. &lt;!DOCTYPE html&gt;</h3>
+        <div class="explanation">
+            이건 <span class="highlight">"이 문서는 HTML 문서예요!"</span> 라고 컴퓨터에게 알려주는 표시예요.<br>
+            마치 책 표지에 <strong>"이 책은 동화책이에요"</strong>라고 쓰는 것처럼요!
+        </div>
+
+        <h3>2. &lt;html&gt; ~ &lt;/html&gt;</h3>
+        <div class="explanation">
+            이건 <span class="highlight">HTML 문서 전체를 감싸는 가장 큰 상자</span>예요.<br>
+            모든 것이 이 안에 들어가요. 마치 도시 전체를 둘러싸는 큰 성벽 같은 거예요!
+        </div>
+
+        <div class="structure-diagram">
+            <div class="diagram-box box-html">&lt;html&gt; (전체 상자)</div><br>
+            <div style="margin: 10px 0;">├─</div>
+            <div class="diagram-box box-head">&lt;head&gt; (머리)</div>
+            <div style="margin: 5px 0;">│ └─ <span class="diagram-box box-title">&lt;title&gt; (제목)</span></div>
+            <div style="margin: 10px 0;">├─</div>
+            <div class="diagram-box box-body">&lt;body&gt; (몸통)</div>
+            <div style="margin: 5px 0;">│ └─ <span class="diagram-box box-h1">&lt;h1&gt; (큰 제목)</span></div>
+            <div style="margin: 5px 0;">│ └─ <span class="diagram-box box-p">&lt;p&gt; (본문)</span></div>
+        </div>
+
+        <h3>3. &lt;head&gt; ~ &lt;/head&gt;</h3>
+        <div class="explanation">
+            이건 <span class="highlight">머리 부분</span>이예요. 사람 머릿속에는 생각이 들어있잖아요? 여기도 비슷해요.<br>
+            <strong>화면에는 안 보이지만 중요한 정보</strong>를 넣는 곳이예요.
+        </div>
+
+        <div class="tip-box">
+            <strong>&lt;title&gt;</strong> : 브라우저 탭(위쪽 창)에 보이는 제목이예요.<br>
+            예를 들어 "네이버"나 "유튜브" 같은 거예요!
+        </div>
+
+        <h3>4. &lt;body&gt; ~ &lt;/body&gt;</h3>
+        <div class="explanation">
+            이건 <span class="highlight">몸통 부분</span>이예요. 사람의 몸처럼, <strong>화면에 실제로 보이는 모든 내용</strong>이 여기 들어가요.
+        </div>
+
+        <ul>
+            <li><strong>&lt;h1&gt;</strong> : <strong>큰 제목</strong> (책의 큰 제목처럼)</li>
+            <li><strong>&lt;p&gt;</strong> : <strong>문단, 글 내용</strong> (책의 본문처럼)</li>
+        </ul>
+
+        <h2>실제로 보면 이렇게 보여요!</h2>
+        <p>위에 쓴 코드를 실행하면 브라우저 화면에 이렇게 나와요:</p>
+
+        <div class="browser-preview">
+            <div class="browser-bar">
+                <div class="browser-dot dot-red"></div>
+                <div class="browser-dot dot-yellow"></div>
+                <div class="browser-dot dot-green"></div>
+                <div class="browser-url">내 웹페이지 제목</div>
+            </div>
+            <div class="browser-content">
+                <h1 style="color: #333; margin-bottom: 15px;">안녕! 나의 첫 웹페이지</h1>
+                <p style="color: #666;">여기에 내용을 쓰면 화면에 보여요.</p>
+            </div>
+        </div>
+
+        <div class="memory-trick">
+            <span class="emoji-big">🧠</span>
+            <strong>쉽게 외우는 방법!</strong><br><br>
+            "머리(head)에는 생각(title)을 담고,<br>
+            몸(body)에는 보여줄 내용을 담는다!"
+        </div>
+
+        <h2>중요한 규칙 하나!</h2>
+        <div class="explanation">
+            HTML은 <span class="highlight">태그(tag)</span> 라는 걸 사용해요. 태그는 <strong>여는 태그</strong> <span class="tag-pair">&lt;h1&gt;</span> 와 <strong>닫는 태그</strong> <span class="tag-pair">&lt;/h1&gt;</span> 가 한 쌍이예요.<br><br>
+            마치 문을 열고(&lt;&gt;) 다시 닫는(&lt;/&gt;) 것처럼요!
+        </div>
+
+        <div class="tip-box">
+            <strong>순서:</strong> 열기 &rarr; 내용 쓰기 &rarr; 닫기<br><br>
+            <span class="tag-pair">&lt;h1&gt;</span> 안녕하세요! <span class="tag-pair">&lt;/h1&gt;</span><br><br>
+            이렇게 안 하면 HTML이 "어? 이 문이 안 닫혔네?" 하고 헷갈려할 수 있어요.
+        </div>
+
+        <h2>정리하기</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <tr style="background-color: #f8f9fa;">
+                <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left;">부분</th>
+                <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left;">역할</th>
+                <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left;">화면에 보여요?</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;!DOCTYPE html&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">"이건 HTML이에요" 알림</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">❌ 안 보여요</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;html&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">전체를 감싸는 상자</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">❌ 안 보여요</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;head&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">머리 (생각/설정)</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">❌ 안 보여요</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;title&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">브라우저 탭 제목</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">✅ 탭에만 보여요</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;body&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">몸통 (실제 내용)</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">✅ 보여요!</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;h1&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">큰 제목</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">✅ 보여요!</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">&lt;p&gt;</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">문단/본문</td>
+                <td style="border: 1px solid #dee2e6; padding: 12px;">✅ 보여요!</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p>HTML 기본 구조 정리 - 초등학생용</p>
+            <p>이 파일을 저장하고 웹 브라우저에서 열면 예쁘게 보여요!</p>
+        </footer>
+    </div>
+</body>
+</html>

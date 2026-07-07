@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import url('reset.css');
+body{height: 300vh;}
+
+.container{
+    width: 500px;
+    height: 150vh;
+    background-color: #eee;
+    padding: 50px;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    margin-bottom: 120px;
+}
+/* 상단마진 겹침현상은 자식요소 뿐 아니라 부모요소에게도 영향을 줌
+부모요소에게 영향이 없이 요소를 내리고 싶다면 부모요소에서 padding */
+.sticky{
+position: sticky;
+top: 300px;
+background-color: aqua;
+}
+/* fixed와 좀 다른 이유는 stikcy는 부모요소가 사라지면 같이 사라짐 */
