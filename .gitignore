@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Node.js dependencies (if used)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+
+*.psd
+*.ai
+*bat/
+
+# JetBrains IDEs
+.idea/
+
+# OS generated files
+*.swp
+*~
