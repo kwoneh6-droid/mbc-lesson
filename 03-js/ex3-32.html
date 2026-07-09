@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>시간이후</h1>
+    <pre>
+        <!-- setTimeout 콜백함수 시간 -->
+        setTimeout(콜백함수,시간)
+        지정된 시간이후 함수 호출
+    </pre>
+    <script>
+      let num = 2;
+      const timer1 = () => document.write(`${num}초지남`);
+      const stop1 = setTimeout(timer1, num * 1000);
+      clearTimeout(stop1);
+    </script>
+    <h1>간격실행</h1>
+
+    <pre>
+    setInterval(콜백함수,시간)
+    clearinterval(serInterval의 ID)
+    </pre>
+
+    <script>
+      
+      let n =1;
+      const timer2 =()=> document.write(`${n}초마다 실행`)
+      const stop2 = setInterval(timer2,n*1000)
+      
+      clearInterval(stop2)
+    </script>
+
+    <!-- requestAnimationFrame()
+    모바일응ㄹ 고려해서 성능을 최적화 할수 있는 함수로 바꿔달라고 하면 아마 이걸로 바꿔줄것
+    ->어렵고 복잡해서 개발자들이 잘 안쓰는데  
+    -->
+  </body>
+</html>
